@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap');
+
+:root {
+    --primary-clr: #eb5757;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Sen', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100px;
+}
+
+.alert {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: black;
+}
+
+.alert button {
+    cursor: pointer;
+    height: 30px;
+    padding-inline: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary-clr);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+.alert p {
+    color: white;
+    text-align: center;
+}
+
+.top-nav {
+    padding-inline: 20px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary-clr);
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    column-gap: 20px;
+}
+
+nav a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.cart-wrapper {
+    float: right;
+    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    background-color: black;
+}
+
+.cart-wrapper img {
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    height: 24px;
+}
+
+.cart-wrapper::after {
+    content: '2';
+    text-align: center;
+    color: #eb5757;
+    font-weight: 700;
+    font-size: 12px;
+    padding-top: 3px;
+    width: 20px;
+    height: 19px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+
+.ham-menu {
+    display: none;
+}
+
+.ham-menu span {
+    transform: rotateX(0deg);
+    transition: .5s all;
+    height: 3px;
+    border-radius: 1px;
+    background-color: white;
+}
+
+
+.ham-menu span:not(.middle) {
+    transform: rotateX(0deg);
+    transition: .5s all;
+    width: 100%;
+
+}
+
+span.middle {
+    transform: rotateX(0deg);
+    transition: .5s all;
+    width: 70%;
+}
+
+
+
+.container {
+    padding-inline: 25px;
+}
+
+.hero {
+    padding-top: 100px;
+    position: relative;
+}
+
+.hero .hero-content {
+    width: 40%;
+    color: white;
+    position: absolute;
+    top: 30%;
+}
+
+.hero .hero-paragraph {
+    line-height: 1.5;
+    font-size: 19px;
+}
+
+
+.hero .hero-button-wrapper {
+    border: 1px white solid;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 700;
+    transition: .25s all;
+
+}
+
+.hero .hero-button-wrapper:hover {
+    color: black;
+    background-color: white;
+}
+
+.hero .hero-heading {
+    font-size: 52px;
+}
+
+.hero .hero-bg {
+    background-image: linear-gradient(360deg, #222, rgba(34, 34, 34, 0)),
+        url("https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e83f98bae1ad80129fcd7e5_wu-jianxiong-UniC8xhlzaE-unsplash.jpg");
+    min-height: 550px;
+    background-position: 0px 0px, 50% 50%;
+    background-size: auto, cover;
+}
+
+.support-wrapper {
+    width: 100%;
+
+}
+
+.support-wrapper .left-top-text,
+.right-bottom-text {
+    color: #222;
+
+}
+
+.left-top-text {
+    font-size: 18px;
+}
+
+.left-top-text>span {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.right-bottom-text {
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.container:not(:first-child) {
+    padding-block: 12.5px;
+}
+
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding-bottom: 35px;
+    align-items: center;
+    justify-items: center;
+    row-gap: 30px;
+}
+
+
+.support-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+.support-square {
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+    width: 100%;
+    background-color: #333;
+}
+
+
+.support-square-text {
+    color: white;
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    text-align: center;
+}
+
+
+.support-square-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+}
+
+
+.support-square-image {
+    position: absolute;
+    bottom: -100px;
+    right: 0;
+}
+
+
+.hero2 {
+    position: relative;
+}
+
+
+.hero2 .hero-bg {
+    background-image: linear-gradient(360deg, #222, rgba(34, 34, 34, 0)),
+        url("https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e83fb3a6948e1f05b20527f_nathan-dumlao-pLoMDKtl-JY-unsplash.jpg");
+    min-height: 550px;
+    background-position: 0px 0px, 50% 50%;
+    background-size: auto, cover;
+}
+
+
+
+.hero2 .hero-content {
+    width: 600px;
+    color: white;
+    position: absolute;
+    top: 10%;
+    right: 25px;
+}
+
+.hero2 .hero-paragraph {
+    width: 60%;
+    line-height: 1.5;
+    font-size: 19px;
+}
+
+
+.hero2 .hero-button-wrapper {
+    border: 1px white solid;
+    width: 220px;
+    height: 30px;
+    border-radius: 5px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    font-weight: 700;
+    border: none;
+    transition: .25s all;
+
+}
+
+.hero2 .hero-button-wrapper:hover {
+    color: white;
+    background-color: var(--primary-clr);
+}
+
+.hero2 .hero-heading {
+    font-size: 52px;
+}
+
+
+.shop-image {
+    margin-bottom: 10px;
+    background-image: url("https://www.ikea.com/gb/en/images/products/dyning-canopy-wedge-shaped-white__0906617_pe616034_s5.jpg?f=s");
+    height: 450px;
+    width: 400px;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.shop-item-name {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.shop-button-wrapper {
+    width: 120px;
+    height: 40px;
+    background-color: var(--primary-clr);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: 700;
+    transition: .25s all;
+    cursor: pointer;
+    transition: .25s all;
+
+
+}
+
+.shop-button-wrapper:hover {
+    background-color: black;
+}
+
+
+.product-wrapper .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    align-items: center;
+    justify-items: center;
+    row-gap: 30px;
+}
+
+.shop-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+.shop-item-wrapper a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+.price-wrapper {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.price-wrapper .original {
+    color: red;
+    text-decoration: line-through;
+}
+
+.shop-local-wrapper {
+    padding-block: 25px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-local-left {
+    width: 30%;
+    height: 0px;
+    min-height: 440px;
+    border-radius: 5px;
+    background-image: url("https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e83fe3910db4fde2e69f396_christiann-koepke-dQyS2pMYtok-unsplash%20(1).jpg");
+    background-position: 69% 80%;
+    background-size: 270%;
+}
+
+.shop-local-right {
+    display: flex;
+    width: 50%;
+    padding: 45px;
+    border-radius: 5px;
+    background-color: #222;
+    color: #f9f9f9;
+}
+
+.shop-local-content-wrapper {
+    width: 600px;
+    height: 450px;
+}
+
+
+footer>div {
+    height: 250px;
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .container div:nth-child(2) {
+    display: flex;
+    gap: 10px;
+
+}
+
+/* Mobile */
+@media (max-width:700px) {
+
+    .alert {
+        padding-top: 10px;
+        gap: 0;
+        height: 70px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 30px 40px;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .alert button {
+        width: 150px;
+    }
+
+
+    nav {
+        padding-top: 10px;
+        display: none;
+        position: absolute;
+        width: 250px;
+        height: 300px;
+        top: 140px;
+        right: 25px;
+        overflow-y: scroll;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        background-color: aliceblue;
+    }
+
+
+    /* nav::before {
+        content: '';
+        position: absolute;
+        right: 25px;
+        top: -15px;
+        z-index: 2;
+        border-style: solid;
+        border-width: 10px;
+        border-color: transparent transparent rgb(7, 8, 8) transparent;
+    } */
+
+    nav a {
+        position: relative;
+        width: 70%;
+        text-align: start;
+        padding-bottom: 20px;
+        color: black;
+        transition: .25s all;
+    }
+
+    nav a:not(:last-child) {
+        border-bottom: 1px rgb(194, 191, 191) solid;
+    }
+
+    nav a:hover {
+        padding-left: 10px;
+    }
+
+    .ham-menu {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 32px;
+        height: 20px;
+    }
+
+
+    .cart-wrapper {
+        cursor: pointer;
+        position: absolute;
+        right: 80px;
+    }
+
+
+
+    .hero .hero-heading {
+        font-size: 40px;
+    }
+
+    .hero .hero-content {
+        width: 250px;
+        top: 40%;
+        font-size: 12px;
+    }
+
+    .hero .hero-paragraph {
+        font-size: 16px;
+    }
+
+
+
+
+
+    .support-wrapper {
+        padding-top: 25px;
+    }
+
+
+    .hero2 .hero-heading {
+        font-size: 35px;
+    }
+
+    .hero2 .hero-content {
+        width: 350px;
+        top: 15%;
+        font-size: 12px;
+    }
+
+    .hero2 .hero-paragraph {
+        font-size: 16px;
+    }
+
+    .shop-local-wrapper {
+        flex-direction: column;
+    }
+
+    .shop-local-left {
+        width: 90%;
+        min-height: 340px;
+        background-position: 69% 80%;
+        background-size: cover;
+    }
+
+    .shop-local-right {
+        width: 80%;
+        height: 400px;
+        margin: 45px;
+    }
+
+
+    .close-menu span:first-child {
+        transition: .5s ease-in;
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .close-menu span:nth-child(2) {
+        transform: translateX(45);
+        opacity: 0;
+
+        transition: .5s ease-in-out;
+    }
+
+
+    .close-menu span:last-child {
+        transition: .5s ease-in;
+        transform: rotate(-45deg) translate(6px, -8px);
+    }
+
+
+
+}
